@@ -18,6 +18,6 @@ public class ShopServiceImpl implements ShopService {
         ShopDto shop2 = ShopDto.builder().name("Colombo 8").address("No 7/3 , Wellawaththa").build();
         allShops.add(shop1);
         allShops.add(shop2);
-        return Flux.fromIterable(allShops);
+        return Flux.fromStream(allShops.stream());
     }
 }
